@@ -1,0 +1,37 @@
+Methodology
+The methodology for this project follows a structured approach to gather, clean, analyze, and visualize data related to Taylor Swift's songs and their chart performance. The steps are outlined below:
+
+1. Data Collection
+The data used in this project was sourced from the following: Billboard Hot 100 Dataset: A CSV file containing weekly data on the performance of songs on the Billboard Hot 100 chart, including song titles, artists, and ranking data over the past decade.
+Spotify Dataset: Spotify's API was used to extract audio features for each song, including attributes like danceability, energy, acoustics, and liveness.
+
+2. Data Cleaning and Preprocessing
+To ensure the data is accurate and suitable for analysis, the following steps were taken: Missing Values: Any rows with missing data for key features (e.g., song name, artist name, chart position) were either removed or filled with reasonable defaults (if applicable).
+Duplicate Removal: Duplicate records were identified and removed to prevent skewing the analysis.
+Data Type Conversion: Data types were verified, and columns like date were converted to the appropriate datetime format for easy manipulation.
+Data Merging: Data from the Billboard Hot 100 and Spotify were merged based on song title and artist to create a complete dataset with chart performance and audio features.
+
+3. Feature Engineering
+New features were created to gain more insights from the existing data: Song Longevity: Calculated the number of weeks each song spent on the Billboard Hot 100 chart.
+Peak Position: Extracted the highest chart position achieved by each song on the Billboard Hot 100.
+Genre Classification: Added categorical labels for the genre of each song based on common industry knowledge (e.g., Pop, Country, Rock).
+
+4. Exploratory Data Analysis (EDA)
+EDA was performed to uncover patterns and insights from the data: Trend Analysis: Plotted time series data to observe trends in Taylor Swift’s songs' chart performance over time.
+Correlation Analysis: Analyzed the correlation between various audio features (e.g., danceability, acoustics, energy) and chart position using Pearson’s correlation.
+Top Hits: Identified which songs had the longest duration on the charts and the highest peak positions.
+
+5. Data Visualization
+Various data visualizations were created to help understand and communicate the findings: Line Graphs: Used to show the weekly progression of songs on the Billboard Hot 100 chart.
+Bar Charts: Created to compare the peak positions of Taylor Swift's songs across albums.
+Heatmaps: Visualized correlations between different audio features (e.g., danceability vs. energy, acoustics vs. popularity).
+Word Cloud: A word cloud was generated to highlight the most common terms in Taylor Swift's song titles.
+
+6. Modeling (Future Work)
+The next steps in the analysis will involve building predictive models to: Predict Chart Success: Using machine learning techniques (e.g., Random Forest, Linear Regression) to predict the likelihood of a song's success on the charts based on its audio features.
+Genre Classification: Building a model to classify songs into genres based on audio features, leveraging supervised learning algorithms.
+
+7. Limitations
+Some limitations of this project include:
+Incomplete Dataset: The dataset does not include data for Taylor Swift's live performances or international chart data.
+Song Metadata: Not all songs have consistent metadata across both the Billboard Hot 100 and Spotify, leading to some data inconsistencies.
